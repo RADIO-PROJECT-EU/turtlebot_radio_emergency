@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package>
+  <name>turtlebot_radio_emergency</name>
+  <version>0.0.0</version>
+  <description>The turtlebot_radio_emergency_button package</description>
+
+  <maintainer email="jmrapado@robotnik.es">Jose Robotnik</maintainer>
+  
+  <license>BSD</license>
+
+  <author email="jmrapado@robotnik.es">Jose Robotnik</author> -->
+
+  <build_depend>rospy</build_depend>
+  <run_depend>rospy</run_depend>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+   
+  </export>
+</package>
