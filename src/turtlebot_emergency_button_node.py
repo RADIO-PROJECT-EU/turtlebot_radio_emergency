@@ -56,7 +56,7 @@ class TurtlebotEmergencyButton(object):
         self.msg_state = Bool()
 
     def SensorStateCallback(self, data):
-        rospy.loginfo('TurtlebotEmergency:SensorStateCallback:: Received a message! ')
+        #rospy.loginfo('TurtlebotEmergency:SensorStateCallback:: Received a message! ')
         input = data.analog_input[1]
         self.msg_twist.linear.x = 0.0
         self.msg_twist.linear.y = 0.0
@@ -65,7 +65,7 @@ class TurtlebotEmergencyButton(object):
         self.msg_twist.angular.y = 0.0
         self.msg_twist.angular.z = 0.0
         
-        if input < 3500:
+        if input > 3500:
             #rospy.loginfo('TurtlebotEmergency:SensorStateCallback:: Emergency Button Pressed!! ')
             self.twist_publisher.publish(self.msg_twist)
             self.msg_state = True
